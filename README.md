@@ -3,7 +3,7 @@ React Notes
 
 ***** You will need https://nodejs.org *****
 
-***** You will need to add the following in the terminal npm create vite@latest *****
+***** You will need to add the following in the terminal: npm create vite@latest *****
 ***** select a project name *****
 ***** Select a framework *****
 ***** select a variant Choose JavaScript *****
@@ -53,6 +53,33 @@ React Notes
 
 
 
+***** CLICK EVENT = An interaction when a user clicks on a component we can respond to clicks by passing a callback to the onclick event handle *****
+
+
+    *** App.jsx: ***
+
+    import Students from './Students.jsx'
+
+    function App(){
+    return(
+      <>
+        <Students name="Kim" age={29} isStudents={true} />
+        <Students name="Sam" age={20} isStudents={fale} />
+        <Students name="Tim" age={45} isStudents={true} />
+        <Students name="jim" age={99} isStudents={false} />
+      </>
+     );
+    }
+
+     *** Button.jsx Component: ***
+          
+          function Button(){
+             const handleClick = () => console.log("OUCH");
+             const handleClick2 = (name) => console.log('${name} stop clicking me');
+             
+             return(<button onclick={() => handleClick2("Bro")}>Click me</button>);
+            }
+              export default Button
 
 
 
