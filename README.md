@@ -13,3 +13,48 @@ React Notes
 ***** Assets folder = this is for pics, videos, etc *****
 ***** main.jsx = is your main javascript file *****
 ***** App.jsx = this is your route component all the other components will route to this component *****
+
+***** Props = read only properties that are shared between components. A parent compnent can send data to a child component. <Component key=value /> *****
+
+    *** App.jsx: ***
+
+    import Students from './Students.jsx'
+
+    function App(){
+    return(
+      <>
+        <Students name="Kim" age={29} isStudents={true} />
+        <Students name="Sam" age={20} isStudents={fale} />
+        <Students name="Tim" age={45} isStudents={true} />
+        <Students name="jim" age={99} isStudents={false} />
+      </>
+     );
+    }
+
+     *** Students.jsx Component: ***
+
+          import PropTypes from 'prop-types'
+          
+          function Students(props){
+               return(
+                   <div>
+                     <p>Name: {props.name}<p>
+                     <p>Age: {props.age}<p>
+                     <p>Students: {props.isStudents ? "Yes" : "No"}<p>
+                   </div>
+                 );  
+                 }
+                Students.propTypes = {
+                  name: PropTypes.string,
+                  name: PropTypes.number,
+                  name: PropTypes.bool,
+                  }
+              export default Students
+
+
+
+
+
+
+
+             
