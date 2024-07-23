@@ -80,7 +80,9 @@ React Notes
              return(<button onclick={() => handleClick2("Bro")}>Click me</button>);
             }
               export default Button
-
+***** https://reactrouter.com/en/main/start/tutorial  *****
+***** https://react.dev/learn/passing-data-deeply-with-context *****
+***** https://docs.pmnd.rs/zustand/getting-started/introduction *****
 
 
 
